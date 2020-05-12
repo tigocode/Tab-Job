@@ -1,6 +1,6 @@
 <h4 align="center">
   <img src="./img/Logo.svg" width="250px"/><br>
-  <b>Bem vindo ao Tab Job!</b>
+  ### :Card File Box: <b>Bem vindo ao Tab Job!</b>
 </h4>
 
 <p align=center>
@@ -12,7 +12,7 @@
 
 <br>
 
-### :rocket: Tecnologias usadas
+### :Suitcase: Tecnologias usadas
 Este projeto foi desenvolvido com as seguintes tecnologias:
 - [Node.js](https://nodejs.org/en/)
 - [Expo](https://expo.io/)
