@@ -1,5 +1,5 @@
 <h4 align="center">
-  <img src="./img/TabJob.png">
+  <img src="./img/Logo.svg">
   <b>Bem vindo ao Tab Job!</b>
 </h4>
 
