@@ -12,7 +12,7 @@
 
 <br>
 
-### :🏠: Tecnologias usadas
+### 🏠 Tecnologias usadas
 Este projeto foi desenvolvido com as seguintes tecnologias:
 - [Node.js](https://nodejs.org/en/)
 - [Expo](https://expo.io/)
