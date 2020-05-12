@@ -1,0 +1,51 @@
+.com-container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.com-container header {
+  display: flex;
+  align-items: center;
+}
+
+.com-container header img {
+  height: 65px;
+}
+
+.com-container .content form {
+  width: 100%;
+  max-width: 1180px;
+  margin-top: 45px;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+  overflow-x:auto;
+}
+
+.com-container .content form .button {
+  text-decoration: none;
+  width:100%;
+  max-width: 170px;
+}
+
+.com-container .content form input {
+  margin-top: 18px;
+  max-width: 300px;
+  
+  display: block;
+}
+
+.com-container .content form table {
+  width: 100%;
+  margin-top: 35px;
+  border-collapse: collapse;
+}
+
+.com-container .content form th, td {
+  text-align: center;
+  padding: 6px;  
+}
