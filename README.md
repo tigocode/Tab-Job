@@ -1,6 +1,6 @@
 <h4 align="center">
   <img src="./img/Logo.svg" width="250px"/><br>
-  ### :Card File Box: <b>Bem vindo ao Tab Job!</b>
+  🗃️ <b>Bem vindo ao Tab Job!</b>
 </h4>
 
 <p align=center>
