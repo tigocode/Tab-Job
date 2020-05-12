@@ -1,6 +1,6 @@
 <h4 align="center">
   <img src="./img/Logo.svg" width="250px"/><br>
-  🗃️<b>Bem vindo ao Tab Job!</b>
+  :toolbox:<b>Bem vindo ao Tab Job!</b>
 </h4>
 
 <p align=center>
