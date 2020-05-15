@@ -1,6 +1,6 @@
 .com-container {
   width: 100%;
-  max-width: 1180px;
+  max-width: 1240px;
   padding: 0 30px;
   margin: 32px auto;
 }
@@ -41,11 +41,14 @@
 
 .com-container .content form table {
   width: 100%;
-  margin-top: 35px;
+  margin-top: 25px;
   border-collapse: collapse;
+
+  table-layout: fixed;
+
 }
 
 .com-container .content form th, td {
   text-align: center;
-  padding: 6px;  
+  padding: 6px;
 }

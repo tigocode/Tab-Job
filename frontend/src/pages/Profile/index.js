@@ -12,6 +12,12 @@ export default function Profile() {
       <header>
         <img src={tabImg} alt="Tab Jab" />
         <span>Bem vindo, Tiago Dantas</span>
+        <div className="dropdown">
+          <span className="info">Dashboard</span>
+          <div className="dropdown-content">
+            <p>Hello World!</p>
+          </div>
+        </div>
         <button className="button-logout" type="button">
           <FiPower size={18} color="#E03737" />
         </button>

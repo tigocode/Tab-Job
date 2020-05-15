@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FiLogOut, FiEdit2, FiTrash2 } from 'react-icons/fi'
+import { FiLogOut, FiEdit, FiEdit2, FiTrash2, FiSearch } from 'react-icons/fi'
 
 import './styles.css'
 
@@ -11,8 +11,8 @@ export default function DevoluctionComLR() {
     <div className="com-container">
       <header>
         <img src={tabImg} alt="Tab Job"/>
-        <span>Bem vindo, Tiago Dantas</span>
-          <Link className="button-logout" to="/profile">
+        <span>Bem vindo, Tiago Dantas</span>        
+        <Link className="button-logout" to="/profile">
           <FiLogOut size={18} color="#E03737" />
         </Link>
       </header>
@@ -29,236 +29,57 @@ export default function DevoluctionComLR() {
                 <th>Cód. Sap</th>
                 <th>Perfil do Cliente</th>
                 <th>Razão Social</th>
-                <th>Observação</th>
-                <th>Data Solicitacao</th>
-                <th>Ultima Solicitacao</th>
+                <th>Data Solicitação</th>
+                <th>Ultima Solicitação</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
+                <td className="back-button-edit">
+                  <Link type="button">
+                    <FiEdit size={18} color="#E03737" />
+                  </Link>
+                  <Link type="button">
+                    <FiEdit2 size={18} color="#E03737" />
+                  </Link>
+                  <Link  type="button">
+                    <FiTrash2 size={18} color="#E03737" />
+                  </Link>
+                  <Link type="button">
+                   <FiSearch size={18} color="#E03737" />
+                  </Link>
                 </td>
                 <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
                 <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
+                <td>15408</td>
                 <td>NAO ADPTDO</td>
                 <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
+                <td>6/1/1986</td>
+                <td>6/12/1986</td>
               </tr>
               <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
+                <td className="back-button-edit">
+                  <Link type="button">
+                  <FiEdit size={18} color="#E03737" />
+                  </Link>
+                  <Link type="button">
+                  <FiEdit2 size={18} color="#E03737" />
+                  </Link>
+                  <Link type="button">
+                  <FiTrash2 size={18} color="#E03737" />
+                  </Link>
+                  <Link type="button">
+                  <FiSearch size={18} color="#E03737" />
+                  </Link>
                 </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
+                <td>DCL-02</td>
                 <td>Pendente</td>
-                <td>115408</td>
+                <td>15408</td>
                 <td>NAO ADPTDO</td>
                 <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-01</td>
-                <td>Aberto</td>
-                <td>11808</td>
-                <td>ADPTDO</td>
-                <td>Tiago Dantas dadasdfds dadasfasdf dadasfasdf</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
-              <tr>
-                <td>
-                <FiEdit2 size={18} color="#E03737" />
-                <FiTrash2 size={18} color="#E03737" />
-                </td>
-                <td>DCL-03</td>
-                <td>Pendente</td>
-                <td>115408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>fadsfasdfasdf</td>
-                <td>16/1/1986</td>
-                <td>16/12/1986</td>
-              </tr>
+                <td>6/1/1986</td>
+                <td>6/12/1986</td>
+              </tr>              
             </tbody>
           </table>
         </form>

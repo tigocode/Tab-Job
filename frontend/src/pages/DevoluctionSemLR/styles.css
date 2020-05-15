@@ -1,0 +1,53 @@
+.sem-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.sem-container header {
+  display: flex;
+  align-items: center;
+}
+
+.sem-container header img {
+  height: 65px;
+}
+
+.sem-container .content form {
+  width: 100%;
+  max-width: 1180px;
+  margin-top: 45px;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+  
+  overflow: auto;
+}
+
+.sem-container .content form .button {
+  text-decoration: none;
+  width: 100%;
+  max-width: 170px;
+}
+
+.sem-container .content form input {
+  margin-top: 18px;
+  max-width: 300px;
+
+  display: block;
+}
+
+.sem-container .content form table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.sem-container .content form th, td {
+  text-align: center;
+  padding: 6px;
+}

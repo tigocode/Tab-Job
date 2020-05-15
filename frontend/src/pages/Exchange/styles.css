@@ -1,0 +1,53 @@
+.exchange-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.exchange-container header {
+  display: flex;
+  align-items: center;
+}
+
+.exchange-container header img {
+  height: 65px;
+}
+
+.exchange-container .content form {
+  width: 100%;
+  max-width: 1180px;
+  margin-top: 45px;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+  overflow: auto;
+}
+
+.exchange-container .content form .button {
+  text-decoration: none;
+  width: 100%;
+  max-width: 170px;
+}
+
+.exchange-container .content form input {
+  margin-top: 18px;
+  max-width: 300px;
+
+  display: block;
+}
+
+.exchange-container .content form table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.exchange-container .content form th, td {
+  text-align: center;
+  padding: 6px;
+}

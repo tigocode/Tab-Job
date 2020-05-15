@@ -1,0 +1,53 @@
+.tabjob-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.tabjob-container header {
+  display: flex;
+  align-items: center;
+}
+
+.tabjob-container header img {
+  height: 65px;
+}
+
+.tabjob-container .content form {
+  width: 100%;
+  max-width: 1180px;
+  margin-top: 45px;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+  
+  overflow-x: auto;
+}
+
+.tabjob-container .content form .button {
+  text-decoration: none;
+  width: 100%;
+  max-width: 170px;
+}
+
+.tabjob-container .content form input {
+  margin-top: 18px;
+  max-width: 300px;
+
+  display: block;
+}
+
+.tabjob-container .content form table {
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.tabjob-container .content form th, td {
+  text-align: center;
+  padding: 6px;
+}
