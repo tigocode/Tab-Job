@@ -18,7 +18,7 @@ export default function DevoluctionComLR() {
       </header>
       <div className="content">
         <form>
-          <Link className="button">Nova devolução</Link>
+          <Link className="button" to="/devoluction+incidents">Nova devolução</Link>
           <input type="text" placeholder="Buscar" />
           <table>
             <thead>

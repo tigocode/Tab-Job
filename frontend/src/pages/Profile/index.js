@@ -15,7 +15,30 @@ export default function Profile() {
         <div className="dropdown">
           <span className="info">Dashboard</span>
           <div className="dropdown-content">
-            <p>Hello World!</p>
+            <li>
+              <strong>Meta</strong>
+              <p>R$ 100.000,00</p>
+            </li>
+            <li>
+              <strong>Realizado Mês</strong>
+              <p>R$ 90.000,00</p>
+            </li>
+            <li>
+              <strong>% Atingimento</strong>
+              <p>90%</p>
+            </li>
+            <li>
+              <strong>Meta Dia</strong>
+              <p>R$ 5.000,00</p>
+            </li>
+            <li>
+              <strong>Realizado Dia</strong>
+              <p>R$ 5.000,00</p>
+            </li>
+            <li>
+              <strong>% Atingimento</strong>
+              <p>100%</p>
+            </li>  
           </div>
         </div>
         <button className="button-logout" type="button">

@@ -1,0 +1,44 @@
+.vistalfa-container {
+  width: 100%;
+  max-width: 1240px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.vistalfa-container header {
+  display: flex;
+  align-items: center;
+}
+
+.vistalfa-container header img {
+  height: 65px;
+}
+
+.vistalfa-container .content form {
+  width: 100%;
+  max-width: 1180px;
+  margin-top: 45px;
+
+  display: block;
+  align-items: center;
+  justify-content: center;
+
+  overflow-x: auto;
+}
+
+.vistalfa-container .content form input {
+  margin-top: 18px;
+  max-width: 380px;
+}
+
+.vistalfa-container .content form table {
+  width: 100%;
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+.vistalfa-container .content form th, td {
+  text-align: center;
+  padding: 6px;
+}

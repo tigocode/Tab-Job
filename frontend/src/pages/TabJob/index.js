@@ -15,8 +15,30 @@ export default function TabJob() {
         <div className="dropdown">
           <span className="info">Dashboard</span>
           <div className="dropdown-content">
-            <p>Hello World!</p>
-            <p>Hello World!</p>
+            <li>
+              <strong>Meta</strong>
+              <p>R$ 100.000,00</p>
+            </li>
+            <li>
+              <strong>Realizado Mês</strong>
+              <p>R$ 90.000,00</p>
+            </li>
+            <li>
+              <strong>% Atingimento</strong>
+              <p>90%</p>
+            </li>
+            <li>
+              <strong>Meta Dia</strong>
+              <p>R$ 5.000,00</p>
+            </li>
+            <li>
+              <strong>Realizado Dia</strong>
+              <p>R$ 5.000,00</p>
+            </li>
+            <li>
+              <strong>% Atingimento</strong>
+              <p>100%</p>
+            </li>  
           </div>
         </div>
         <Link className="button-logout" to="/profile">
@@ -25,7 +47,7 @@ export default function TabJob() {
       </header>
       <div className="content">
         <form>
-          <Link className="button">Novo pedido</Link>          
+          <Link className="button" to="/tab+job+incidents">Novo pedido</Link>          
           <input type="text" placeholder="Buscar" />
           <table>
             <thead>

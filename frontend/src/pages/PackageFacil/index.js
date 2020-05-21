@@ -18,7 +18,7 @@ export default function PackageFacil() {
       </header>
       <div className="content">
         <form>
-          <Link className="button">Novo pacote</Link>
+          <Link className="button" to="/package+incidents">Novo pacote</Link>
           <input type="text" placeholder="Buscar" />
           <table>
             <thead>

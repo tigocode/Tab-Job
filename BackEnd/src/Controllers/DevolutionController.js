@@ -94,5 +94,25 @@ module.exports = {
     })
     
     return response.json(devoluction)
+  },
+
+  async delete(request, response) {
+
+    const { id } = request.params
+    const user_id = request.headers.authorization
+
+    const devoluction = await connection('devoluction')
+      .where('id', id)
+      .select('user_id')
+      .first()
+
+    if (devoluction.user_id !== user_id) {
+      return response.status(401).json({ error: 'Operation not permitted.' })
+    }
+
+    await connection('devoluction').where('id', id).delete()
+
+    return response.status(204).send()
+      
   }
 }

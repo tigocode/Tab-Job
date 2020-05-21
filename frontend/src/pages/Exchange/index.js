@@ -18,7 +18,7 @@ export default function Exchange() {
       </header>
       <div className="content">
         <form>
-          <Link className="button">Nova troca</Link>
+          <Link className="button" to="/exchange+incidents">Nova troca</Link>
           <input type="text" placeholder="Buscar" />
           <table>
             <thead>
