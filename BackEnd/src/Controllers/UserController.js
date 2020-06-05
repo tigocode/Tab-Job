@@ -4,6 +4,7 @@ const connection = require('../database/connection')
 
 
 module.exports = {
+  
   async Index(request, response) {
     const user = await connection('user').select('*')
 
@@ -11,7 +12,9 @@ module.exports = {
   },
 
   async Create(request, response) {
-    const { name, email, avatar, password, cpf, contact, cell_phone, provider } = request.body
+    const { name, email, password, cpf, contact, cell_phone } = request.body
+
+    const provider = 0
 
     const hash = crypto.createHash('md5').update(password).digest('HEX')
 
@@ -23,7 +26,6 @@ module.exports = {
       id,
       name,
       email,
-      avatar,
       password_hash,
       cpf,
       contact,

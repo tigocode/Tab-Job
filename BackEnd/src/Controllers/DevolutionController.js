@@ -17,9 +17,9 @@ module.exports = {
         'user.name'
       ])
     
-      response.header('X-Total-Count', count['count(*)'])
-    
-      return response.json(devoluction)
+    response.header('X-Total-Count', count['count(*)'])
+  
+    return response.json(devoluction)
   },
 
   async Create(request, response) {
@@ -34,7 +34,6 @@ module.exports = {
     const [id] = await connection('devoluction').insert({
       cod_sap,
       type,
-      type_paddle,
       model,
       quantity_boxes,
       value_devoluction,
@@ -44,11 +43,12 @@ module.exports = {
       difference_value,
       reason,
       Note,
-      date_solicitation,
-      last_devoluction,
-      status,
-      cic,
-      cic_Note,
+      //date_solicitation,
+      //last_devoluction,
+      //status,
+      //type_paddle,
+      //cic,
+      //cic_Note,
       user_id,
     })
       
@@ -96,7 +96,7 @@ module.exports = {
     return response.json(devoluction)
   },
 
-  async delete(request, response) {
+  async Delete(request, response) {
 
     const { id } = request.params
     const user_id = request.headers.authorization

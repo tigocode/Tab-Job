@@ -4,12 +4,12 @@ exports.up = function(knex) {
     table.string('id').primary()
     table.string('name').notNullable()
     table.string('email').notNullable()
-    table.string('avatar').notNullable()
     table.string('password_hash').notNullable()
-    table.string('cpf', 12).notNullable()
+    table.string('cpf', 11).notNullable()
     table.string('contact').notNullable()
     table.string('cell_phone').notNullable()
     table.string('provider').notNullable()
+    table.string('createdAt').defaultTo((new Date()).toLocaleDateString())
   })
 };
 

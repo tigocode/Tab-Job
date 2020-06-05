@@ -38,6 +38,7 @@ exports.up = function(knex) {
     table.string('data_de_criação').notNullable()
     table.string('faixa').notNullable()
     table.string('responsavel').notNullable()
+    table.string('createdAt').defaultTo((new Date()).toLocaleDateString())
 
     table.string('user_id').notNullable()
 

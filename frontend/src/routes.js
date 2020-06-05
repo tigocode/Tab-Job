@@ -20,6 +20,7 @@ import IncidentsDevoluction from './pages/PagesUtils/IncidentsDevoluction'
 import Exchange from './pages/Exchange'
 import IncidentsExchange from './pages/PagesUtils/IncidentsExchange'
 
+
 export default function Routes() {
   return (
     <BrowserRouter>
@@ -42,7 +43,7 @@ export default function Routes() {
         <Route path="/devoluction+incidents" component={IncidentsDevoluction} />
 
         <Route path="/exchange" component={Exchange} />
-        <Route path="/exchange+incidents" component={IncidentsExchange} />  
+        <Route path="/exchange+incidents" component={IncidentsExchange} /> 
 
       </Switch>
     </BrowserRouter>

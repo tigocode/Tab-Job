@@ -15,7 +15,7 @@ exports.up = function(knex) {
     table.string('difference_value').notNullable()
     table.string('reason').notNullable()
     table.string('Note').notNullable()
-    table.string('date_solicitation').notNullable()
+    table.string('date_solicitation').defaultTo((new Date()).toLocaleDateString())
     table.string('last_devoluction').notNullable()
     table.string('status').notNullable()
     table.string('cic').notNullable()

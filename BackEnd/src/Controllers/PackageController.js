@@ -26,7 +26,7 @@ module.exports = {
 
     const { cod_sap, social_reason, 
             model, quantity_boxes, 
-            date, discount, Form_of_payment } = request.body
+            discount, Form_of_payment } = request.body
     
     const user_id = request.headers.authorization
 
@@ -35,7 +35,6 @@ module.exports = {
       social_reason,
       model,
       quantity_boxes,
-      date,
       discount,
       Form_of_payment,
       user_id,

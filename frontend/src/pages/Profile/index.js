@@ -1,19 +1,35 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FiPower } from 'react-icons/fi'
+import { FiPower, FiChevronDown } from 'react-icons/fi'
 
 import './styles.css'
 
 import tabImg from '../../assets/Logo.svg'
 
 export default function Profile() {
+  const userName = localStorage.getItem('userName')
+
+  const stringName = userName
+  const resultado = stringName.split(" ")
+
+  const nameSeparado = resultado.shift() + ' ' + resultado.slice(-1)[0]
+
+  function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("dropdown-up") === -1) { 
+      x.className = "dropdown-up";
+    } else {
+      x.className = x.className.replace("dropdown-up", "dropdown");
+    }
+  }
+
   return (
     <div className="profile-container">
       <header>
         <img src={tabImg} alt="Tab Jab" />
-        <span>Bem vindo, Tiago Dantas</span>
-        <div className="dropdown">
-          <span className="info">Dashboard</span>
+        <span>Bem vindo, {nameSeparado}</span>
+        <div id="Demo" className="dropdown">
+          <span onClick={myFunction} className="info">Dashboard</span><FiChevronDown className="icon" />
           <div className="dropdown-content">
             <li>
               <strong>Meta</strong>

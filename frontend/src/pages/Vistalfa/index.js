@@ -33,7 +33,7 @@ export default function Vistalfa() {
             <tbody>
               <tr>
                 <td className="back-button-edit">
-                  <Link type="button">
+                  <Link type="button"to="/tab+job+incidents" >
                     <FiEdit2 size={18} color="#E03737" />
                   </Link>
                   <Link type="button">

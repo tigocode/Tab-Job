@@ -7,7 +7,7 @@ exports.up = function(knex) {
     table.string('social_reason').notNullable()
     table.string('model').notNullable()
     table.string('quantity_boxes').notNullable()
-    table.string('date').notNullable()
+    table.string('date').defaultTo((new Date()).toLocaleDateString())
     table.string('discount').notNullable()
     table.string('Form_of_payment').notNullable()
 

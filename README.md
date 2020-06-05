@@ -26,4 +26,4 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ### :muscle: Projeto
 Tab Job é um projeto que visa ajudar, de forma a agilizar e controlar o trabalho
-de um equipe eliminando formas não seguras de tabulação.
+de um equipe eliminando formas não seguras de tabulação de demandas no trabalho.
