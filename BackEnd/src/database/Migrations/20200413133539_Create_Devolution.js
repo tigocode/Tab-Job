@@ -5,7 +5,6 @@ exports.up = function(knex) {
 
     table.string('cod_sap').notNullable()
     table.string('type').notNullable()
-    table.string('type_paddle').notNullable()
     table.string('model').notNullable()
     table.string('quantity_boxes').notNullable()
     table.string('value_devoluction').notNullable()
@@ -15,11 +14,12 @@ exports.up = function(knex) {
     table.string('difference_value').notNullable()
     table.string('reason').notNullable()
     table.string('Note').notNullable()
-    table.string('date_solicitation').defaultTo((new Date()).toLocaleDateString())
+    table.timestamp('date_solicitation').defaultTo(knex.fn.now())
     table.string('last_devoluction').notNullable()
-    table.string('status').notNullable()
-    table.string('cic').notNullable()
-    table.string('cic_Note').notNullable()
+    table.string('status').defaultTo('')
+    table.string('type_paddle').defaultTo('')
+    table.string('cic').defaultTo('')
+    table.string('cic_Note').defaultTo('')
 
     table.string('user_id').notNullable();
 

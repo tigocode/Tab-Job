@@ -24,10 +24,10 @@ module.exports = {
 
   async Create(request, response) {
 
-    const { cod_sap, type, type_paddle, model, quantity_boxes, 
+    const { cod_sap, type, model, quantity_boxes, 
             value_devoluction, profile_client, number_new_request,
-            value_new_request, difference_value, reason, Note,
-            date_solicitation, last_devoluction, status, cic, cic_Note } = request.body
+            value_new_request, difference_value, reason, Note, last_devoluction } = request.body
+    const status = 'Aberto'
             
     const user_id = request.headers.authorization
 
@@ -42,13 +42,9 @@ module.exports = {
       value_new_request,
       difference_value,
       reason,
-      Note,
-      //date_solicitation,
-      //last_devoluction,
-      //status,
-      //type_paddle,
-      //cic,
-      //cic_Note,
+      Note,    
+      last_devoluction,
+      status,      
       user_id,
     })
       

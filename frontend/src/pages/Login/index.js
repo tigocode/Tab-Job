@@ -21,7 +21,9 @@ export default function Login() {
       const response = await api.post('session', {id, password})
 
       localStorage.setItem('userId', id)
-      localStorage.setItem('userName',response.data.name)
+      localStorage.setItem('userName', response.data.name)
+      localStorage.setItem('userEmail', response.data.email)
+      localStorage.setItem('userProvider', response.data.provider)
 
       history.push('/profile')
     } catch (error) {

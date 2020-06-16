@@ -21,16 +21,16 @@ export default function IncidentsPackage() {
   const date = new Date().toLocaleDateString()
 
   const history = useHistory()
-
+  
   const listModelos = [
-    {id: 1, name: "Acuvue 2"},
-    {id: 2, name: "1 Day Moist Mult"},
-    {id: 3, name: "1 Day Moist"},
-    {id: 4, name: "1 Day Moist Astg"},      
-    {id: 5, name: "Oasys 1 Day"},
-    {id: 6, name: "Oasys"},
-    {id: 7, name: "Oasys Astg"},
-    {id: 8, name: "Oasys com Trans"},
+    {id: 1, name: 'Acuvue 2'},
+    {id: 2, name: '1 Day Moist Mult'},
+    {id: 3, name: '1 Day Moist'},
+    {id: 4, name: '1 Day Moist Astg'},      
+    {id: 5, name: 'Oasys 1 Day'},
+    {id: 6, name: 'Oasys'},
+    {id: 7, name: 'Oasys Astg'},
+    {id: 8, name: 'Oasys com Trans'},
   ] 
 
   async function handleNewIncidentPackage(e) {
@@ -44,7 +44,7 @@ export default function IncidentsPackage() {
       discount,
       Form_of_payment,
     }
-    console.log(data)
+
     try {
       await api.post('package', data, {
         headers: {
@@ -54,7 +54,7 @@ export default function IncidentsPackage() {
 
       history.push('/package+facil')
     } catch (error) {
-      alert('Erro ao cadastrar pedido, tente novamente.')
+      alert('Erro ao cadastrar pacote, tente novamente.')
     }
   }
 
@@ -111,20 +111,19 @@ export default function IncidentsPackage() {
           <div className="comp-1">
             {
             listModelos.map((item, index) => (
-            <label 
-              className="container"
-              value={model}
-              onChange={e => setModel(e.target.value)}  
-            >{item.name}
-              <input 
-                type="radio" 
-                name="Modelos"
-                key={index} 
-                value={item.name}
+              <label 
+                className="container"
+                value={model}
                 onChange={e => setModel(e.target.value)}
-              />
-              <span className="checkmark"></span>
-            </label>
+              >{item.name}
+                <input 
+                  type="radio" 
+                  name="Modelo"
+                  key={index} 
+                  value={item.name} 
+                />
+                <span className="checkmark"></span>
+              </label>
             ))}               
             </div>
           </div>

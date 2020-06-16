@@ -1,17 +1,50 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FiLogOut, FiEdit, FiEdit2, FiTrash2, FiSearch } from 'react-icons/fi'
+
+import api from '../../services/api'
 
 import './styles.css'
 
 import tabImg from '../../assets/Logo.svg'
 
 export default function DevoluctionComLR() {
+  const type = 'Com LR'
+  localStorage.setItem('typeSoliction', type)
+
+  const userId = localStorage.getItem('userId')
+  const userName = localStorage.getItem('userName')
+
+  const stringName = userName
+  const resultado = stringName.split(" ")
+  const nameSeparado = resultado.shift() + ' ' + resultado.slice(-1)[0]
+
+  const [incidentTab, setIncidentTab] = useState([])
+  const [buscar, setBuscar] = useState('')
+
+  useEffect(() => {
+    api.get('profileDevC', {
+      headers: {
+        Authorization: userId,
+      }
+    }).then(response => {
+      setIncidentTab(response.data)
+    })
+  }, [userId])
+
+  const filtros = incidentTab.filter((filtro) => {
+    if(buscar != '') {
+      return filtro.id  == buscar || filtro.cod_sap  == buscar || filtro.status  == buscar
+    }else{
+      return filtro
+    }
+  })
+
   return (
     <div className="com-container">
       <header>
         <img src={tabImg} alt="Tab Job"/>
-        <span>Bem vindo, Tiago Dantas</span>        
+        <span>Bem vindo, {nameSeparado}</span>        
         <Link className="button-logout" to="/profile">
           <FiLogOut size={18} color="#E03737" />
         </Link>
@@ -19,7 +52,11 @@ export default function DevoluctionComLR() {
       <div className="content">
         <form>
           <Link className="button" to="/devoluction+incidents">Nova devolução</Link>
-          <input type="text" placeholder="Buscar" />
+          <input 
+            type="text" 
+            placeholder="Buscar" 
+            onChange={e => setBuscar(e.target.value)}
+          />
           <table>
             <thead>
               <tr>
@@ -28,13 +65,13 @@ export default function DevoluctionComLR() {
                 <th>Status</th>
                 <th>Cód. Sap</th>
                 <th>Perfil do Cliente</th>
-                <th>Razão Social</th>
                 <th>Data Solicitação</th>
                 <th>Ultima Solicitação</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
+              {filtros.map(incident => (
+                <tr>
                 <td className="back-button-edit">
                   <Link type="button">
                     <FiEdit size={18} color="#E03737" />
@@ -49,37 +86,14 @@ export default function DevoluctionComLR() {
                    <FiSearch size={18} color="#E03737" />
                   </Link>
                 </td>
-                <td>DCL-03</td>
-                <td>Aberto</td>
-                <td>15408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>6/1/1986</td>
-                <td>6/12/1986</td>
+                <td>CLR-{incident.id}</td>
+                <td>{incident.status}</td>
+                <td>{incident.cod_sap}</td>
+                <td>{incident.profile_client}</td>
+                <td>{incident.date_solicitation}</td>
+                <td>{incident.last_devoluction}</td>
               </tr>
-              <tr>
-                <td className="back-button-edit">
-                  <Link type="button">
-                  <FiEdit size={18} color="#E03737" />
-                  </Link>
-                  <Link type="button">
-                  <FiEdit2 size={18} color="#E03737" />
-                  </Link>
-                  <Link type="button">
-                  <FiTrash2 size={18} color="#E03737" />
-                  </Link>
-                  <Link type="button">
-                  <FiSearch size={18} color="#E03737" />
-                  </Link>
-                </td>
-                <td>DCL-02</td>
-                <td>Pendente</td>
-                <td>15408</td>
-                <td>NAO ADPTDO</td>
-                <td>Tiago Dantas</td>
-                <td>6/1/1986</td>
-                <td>6/12/1986</td>
-              </tr>              
+              ))}            
             </tbody>
           </table>
         </form>

@@ -6,8 +6,8 @@ exports.up = function(knex) {
     table.string('cod_sap').notNullable()
     table.string('social_reason').notNullable()
     table.string('model').notNullable()
-    table.string('quantity_boxes').notNullable()
-    table.string('date').defaultTo((new Date()).toLocaleDateString())
+    table.string('quantity_boxes').notNullable()    
+    table.timestamp('date').defaultTo(knex.fn.now())
     table.string('discount').notNullable()
     table.string('Form_of_payment').notNullable()
 

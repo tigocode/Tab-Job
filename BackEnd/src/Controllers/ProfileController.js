@@ -21,14 +21,14 @@ module.exports = {
   async IndexDevoluctionCL(request, response) {
 
     const user_id = request.headers.authorization
-    const { type } = request.body
+    const type = 'Com LR'
 
     const { page = 1 } = request.query
 
     const devoluction = await connection('devoluction')
       .where('user_id', user_id)
       .where('type', type)
-      .limit(5)
+      .limit(12)
       .offset((page - 1 ) * 5)
       .select('*')
 
@@ -38,7 +38,7 @@ module.exports = {
   async IndexDevoluctionSL(request, response) {
 
     const user_id = request.headers.authorization
-    const { type } = request.body
+    const type = 'Sem LR'
 
     const { page = 1 } = request.query
 

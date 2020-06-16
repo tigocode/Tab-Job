@@ -13,7 +13,9 @@ module.exports = {
     const user = await connection('user')
       .where('id', id)
       .where('password_hash', password_hash)
-      .select('name')
+      .select([
+        'user.*'
+      ])
       .first()
     
     if (!user) {

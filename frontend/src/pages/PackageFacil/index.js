@@ -29,12 +29,10 @@ export default function PackageFacil() {
     })
   }, [userId])
 
-
-
   const filtros = incidentTab.filter((filtro) => {
     
     if (buscar != '') {
-      return filtro.id  == buscar || filtro.sap == buscar || filtro.n_pedido == buscar
+      return filtro.id  == buscar || filtro.cod_sap == buscar || filtro.social_reason == buscar
     }else{
       return filtro
     }  

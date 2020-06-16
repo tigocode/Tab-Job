@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.string('contact').notNullable()
     table.string('cell_phone').notNullable()
     table.string('provider').notNullable()
-    table.string('createdAt').defaultTo((new Date()).toLocaleDateString())
+    table.timestamp('createdAt').defaultTo(knex.fn.now())
   })
 };
 

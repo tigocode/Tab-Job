@@ -9,7 +9,7 @@ exports.up = function(knex) {
     table.string('quantity_boxes').notNullable()
     table.string('social_reason').notNullable()
     table.string('Note').notNullable()
-    table.string('date_solicitation').defaultTo((new Date()).toLocaleDateString())
+    table.timestamp('date_solicitation').defaultTo(knex.fn.now())
     table.string('last_devoluction').notNullable()
     table.string('status').notNullable()
     table.string('cic').notNullable()

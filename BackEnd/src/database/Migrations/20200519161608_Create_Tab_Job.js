@@ -4,8 +4,8 @@ exports.up = function(knex) {
     table.increments()
     
     table.string('status').notNullable()
-    table.string('sap').notNullable()
-    table.string('data').defaultTo((new Date()).toLocaleDateString())
+    table.string('sap').notNullable()    
+    table.timestamp('data').defaultTo(knex.fn.now())
     table.string('n_pedido').notNullable()
     table.string('qtd_caixas').notNullable()
     table.string('valor').notNullable()
