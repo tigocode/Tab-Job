@@ -1,5 +1,8 @@
 const express = require('express')
 
+const multer = require('multer')
+const multerConfig = require('./config/multer')
+
 const UserController = require('./Controllers/UserController')
 const DevoluctionController = require('./Controllers/DevolutionController')
 const ExchangeController = require('./Controllers/ExchangeController')
@@ -9,6 +12,8 @@ const TabJobController = require('./Controllers/TabJobController')
 
 const ProfileController = require('./Controllers/ProfileController')
 const SessionController = require('./Controllers/SessionController')
+
+const VistalfaController = require('./Controllers/VistalfaController')
 
 const routes = express.Router()
 
@@ -44,5 +49,8 @@ routes.get('/tabjob', TabJobController.Index)
 routes.post('/tabjob', TabJobController.Create)
 routes.put('/tabjob/:id', TabJobController.Update)
 routes.delete('/tabjob/:id', TabJobController.Delete)
+
+routes.get('/vistalfaImport', VistalfaController.Index)
+routes.post('/vistalfaImport', multer(multerConfig).single('file'), VistalfaController.Import)
 
 module.exports = routes
