@@ -15,6 +15,8 @@ const SessionController = require('./Controllers/SessionController')
 
 const VistalfaController = require('./Controllers/VistalfaController')
 
+const ExportController = require('./Controllers/ExportController')
+
 const routes = express.Router()
 
 routes.post('/session', SessionController.Create)
@@ -52,5 +54,7 @@ routes.delete('/tabjob/:id', TabJobController.Delete)
 
 routes.get('/vistalfaImport', VistalfaController.Index)
 routes.post('/vistalfaImport', multer(multerConfig).single('file'), VistalfaController.Import)
+
+routes.get('/export', ExportController.Export)
 
 module.exports = routes

@@ -37,12 +37,8 @@ exports.up = function(knex) {
     table.string('forma_de_pagamento').notNullable()
     table.string('data_de_criacao').notNullable()
     table.string('faixa').notNullable()
-    table.string('responsavel').notNullable()
-    table.timestamp('createdAt').defaultTo(knex.fn.now())
-
     table.string('user_id').notNullable()
-
-    table.foreign('user_id').references('id').inTable('user')
+    table.timestamp('createdAt').defaultTo(knex.fn.now())
   })
   
 };

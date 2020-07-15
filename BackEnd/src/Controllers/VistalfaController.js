@@ -14,24 +14,28 @@ module.exports = {
     const [count] = await connection('vistalfa').count()
 
     const queryVistalfa =  await connection('vistalfa')
-    .limit(5)
-      .offset((page - 1) * 5)
-      .select('vistalfa.*')
+    .join('user', 'user.id', '=', 'vistalfa.user_id')
+    .limit(12)
+    .offset((page - 1) * 12)
+    .select([
+      'vistalfa.*',
+      'user.name'
+    ])
     
     response.header('X-Total-Count', count['count(*)'])
-
-    return response.json(queryVistalfa)
+    
+    return response.json(queryVistalfa)    
   },
 
   async Import(request, response) {
     const { key } = request.file
-    const user_id = request.headers.authorization
+    //const user_id = request.headers.authorization
 
     const work =  xlsx.readFile(path.resolve("tmp", "uploads", key ))
     const sheet_name_list = work.SheetNames
-    const theEnd = xlsx.utils.sheet_to_json(work.Sheets[sheet_name_list[0]])
+    const theEnd = xlsx.utils.sheet_to_json(work.Sheets[sheet_name_list[0]])    
 
-    theEnd.map(async function(item, indice) {
+    theEnd.map(async function(item) {
       const cod_sap = item.cod_sap
       const numero =  item.numero
       const grupo_rede = item.grupo_rede 
@@ -66,7 +70,7 @@ module.exports = {
       const forma_de_pagamento = item.forma_de_pagamento
       const data_de_criacao = item.data_de_criacao
       const faixa = item.faixa
-      const responsavel = item.responsavel
+      const user_id = item.user_id
 
       
       const post = await connection('vistalfa').insert({
@@ -82,7 +86,7 @@ module.exports = {
         territorio, gestor, gerente, 
         fator_de_conversao_gross_to_nts, 
         prazo_de_pagamento, forma_de_pagamento, 
-        data_de_criacao, faixa, responsavel, user_id
+        data_de_criacao, faixa, user_id
       })
 
       return response.json(post)
